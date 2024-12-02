@@ -2,7 +2,7 @@
 FROM amazoncorretto:17-alpine-jdk
 
 # Copiar el archivo JAR al contenedor
-COPY target/demo_backend-0.0.1-SNAPSHOT.jar app.jar
+COPY demo_backend/target/demo_backend-0.0.1-SNAPSHOT.jar app.jar
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "/app.jar"]
