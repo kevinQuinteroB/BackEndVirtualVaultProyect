@@ -4,6 +4,7 @@ import com.example.demo.demo_backend.models.Inventarios;
 import com.example.demo.demo_backend.services.impl.InventarioServiceImpl;
 import com.example.demo.demo_backend.services.interfaces.InventarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,5 +37,8 @@ public class InventarioController {
     @Autowired
     public void setInventarioService(InventarioService inventarioService) {
         this.inventarioService = inventarioService;
+    }
+
+    @RequestMapping(value = "/**", method = RequestMethod.OPTIONS) public ResponseEntity<?> handleOptions() { return ResponseEntity.ok().build();
     }
 }

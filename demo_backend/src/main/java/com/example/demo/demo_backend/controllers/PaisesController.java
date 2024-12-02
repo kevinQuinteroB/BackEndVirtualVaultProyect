@@ -33,4 +33,7 @@ public class PaisesController {
     public void setPaisService(PaisService paisService) {
         this.paisService = paisService;
     }
+
+    @RequestMapping(value = "/**", method = RequestMethod.OPTIONS) public ResponseEntity<?> handleOptions() { return ResponseEntity.ok().build();
+    }
 }

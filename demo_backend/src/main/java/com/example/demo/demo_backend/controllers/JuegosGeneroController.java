@@ -26,4 +26,7 @@ public class JuegosGeneroController {
     public void setJuegosGeneroService(JuegosGeneroService juegosGeneroService) {
         this.juegosGeneroService = juegosGeneroService;
     }
+
+    @RequestMapping(value = "/**", method = RequestMethod.OPTIONS) public ResponseEntity<?> handleOptions() { return ResponseEntity.ok().build();
+    }
 }

@@ -59,4 +59,7 @@ public class DesarrolladoresController {
     public void setDesarrolladorService(DesarrolladorService desarrolladorService) {
         this.desarrolladorService = desarrolladorService;
     }
+
+    @RequestMapping(value = "/**", method = RequestMethod.OPTIONS) public ResponseEntity<?> handleOptions() { return ResponseEntity.ok().build();
+    }
 }

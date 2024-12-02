@@ -5,6 +5,7 @@ import com.example.demo.demo_backend.repository.ComentarioRepository;
 import com.example.demo.demo_backend.services.impl.ComentarioServiceImpl;
 import com.example.demo.demo_backend.services.interfaces.ComentarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
@@ -48,5 +49,8 @@ public class ComentariosController {
     @Autowired
     public void setComentarioService(ComentarioService comentarioService) {
         this.comentarioService = comentarioService;
+    }
+
+    @RequestMapping(value = "/**", method = RequestMethod.OPTIONS) public ResponseEntity<?> handleOptions() { return ResponseEntity.ok().build();
     }
 }

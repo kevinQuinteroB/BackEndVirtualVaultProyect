@@ -29,4 +29,7 @@ public class GenerosController {
     public void setGeneroService(GeneroService generoService) {
         this.generoService = generoService;
     }
+
+    @RequestMapping(value = "/**", method = RequestMethod.OPTIONS) public ResponseEntity<?> handleOptions() { return ResponseEntity.ok().build();
+    }
 }

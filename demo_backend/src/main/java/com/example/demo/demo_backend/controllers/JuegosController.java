@@ -70,4 +70,7 @@ public class JuegosController{
     public void setJuegoService(JuegoService juegoService) {
         this.juegoService = juegoService;
     }
+
+    @RequestMapping(value = "/**", method = RequestMethod.OPTIONS) public ResponseEntity<?> handleOptions() { return ResponseEntity.ok().build();
+    }
 }
