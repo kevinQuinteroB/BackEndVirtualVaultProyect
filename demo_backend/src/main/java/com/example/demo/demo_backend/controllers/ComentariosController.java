@@ -14,7 +14,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/comentarios")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://virutal-vault.netlify.app")
 public class ComentariosController {
 
     private ComentarioRepository comentarioRepository;

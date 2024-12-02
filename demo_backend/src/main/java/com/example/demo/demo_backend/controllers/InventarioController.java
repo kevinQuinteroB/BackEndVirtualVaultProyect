@@ -11,7 +11,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/inventario")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://virutal-vault.netlify.app")
 public class InventarioController {
 
     private InventarioService inventarioService;

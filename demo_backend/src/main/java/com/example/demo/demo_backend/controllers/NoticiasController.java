@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/noticias")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://virutal-vault.netlify.app")
 public class NoticiasController {
 
     private NoticiaService noticiaService;

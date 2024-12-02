@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/generos")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://virutal-vault.netlify.app")
 public class GenerosController {
 
     private GeneroService generoService;

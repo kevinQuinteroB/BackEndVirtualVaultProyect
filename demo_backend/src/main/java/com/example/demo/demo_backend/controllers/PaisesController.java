@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/paises")
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("https://virutal-vault.netlify.app")
 public class PaisesController {
 
     private PaisService paisService;
