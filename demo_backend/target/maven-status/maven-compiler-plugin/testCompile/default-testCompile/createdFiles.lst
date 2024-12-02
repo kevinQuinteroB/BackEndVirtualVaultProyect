@@ -1,0 +1,6 @@
+com/example/demo/demo_backend/DemoBackendApplicationTests.class
+com/example/demo/demo_backend/services/ComentarioServiceImplTest.class
+com/example/demo/demo_backend/services/InventarioServiceImplTest.class
+com/example/demo/demo_backend/services/GeneroServiceTest.class
+com/example/demo/demo_backend/services/JuegoServiceImplTest.class
+com/example/demo/demo_backend/services/DesarrolladorServiceImplTest.class
