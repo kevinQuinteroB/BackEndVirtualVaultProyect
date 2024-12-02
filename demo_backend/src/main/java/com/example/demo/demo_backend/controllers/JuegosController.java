@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/juegos")
-@CrossOrigin(origins = "https://virutal-vault.netlify.app")
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class JuegosController{
 
     private JuegoService juegoService;
