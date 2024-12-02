@@ -11,10 +11,11 @@ public class WebConfig implements WebMvcConfigurer {
     // Configuración global de CORS
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")  // Permitir todas las rutas
-                .allowedOrigins("https://virutal-vault.netlify.app")  // Permitir el origen de Netlify
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")  // Permitir los métodos relevantes
-                .allowedHeaders("*")  // Permitir todos los encabezados
-                .allowCredentials(true);  // Permitir cookies y credenciales si es necesario
+        // Permite solicitudes desde cualquier origen (puedes especificar orígenes si lo deseas)
+        registry.addMapping("/**")  // Aplícalo a todas las rutas
+                .allowedOrigins("*")  // Permite todos los orígenes
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")  // Permite estos métodos HTTP
+                .allowedHeaders("*")  // Permite todos los encabezados
+                .allowCredentials(true);  // Permite enviar cookies o autenticación
     }
 }
