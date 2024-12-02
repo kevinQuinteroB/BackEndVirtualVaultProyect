@@ -14,7 +14,7 @@ public class CorsConfig {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
 
         // Permite solicitudes de todos los orígenes (o puedes especificar un solo dominio si quieres restringir el acceso)
-        corsConfiguration.addAllowedOrigin("https://virutal-vault.netlify.app");  // Origen específico de Netlify
+        corsConfiguration.addAllowedOrigin("virutal-vault.netlify.app");  // Origen específico de Netlify
 
         // Permite todos los encabezados
         corsConfiguration.addAllowedHeader("*");
