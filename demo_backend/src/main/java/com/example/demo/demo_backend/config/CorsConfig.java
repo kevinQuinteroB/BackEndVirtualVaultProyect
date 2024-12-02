@@ -12,13 +12,22 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.addAllowedOrigin("*"); // Permite cualquier origen
-        corsConfiguration.addAllowedHeader("*"); // Permite cualquier encabezado
-        corsConfiguration.addAllowedMethod("*"); // Permite cualquier método HTTP
-        corsConfiguration.setAllowCredentials(true); // Permite credenciales si es necesario
 
+        // Permite solicitudes de todos los orígenes (o puedes especificar un solo dominio si quieres restringir el acceso)
+        corsConfiguration.addAllowedOrigin("https://virutal-vault.netlify.app");  // Origen específico de Netlify
+
+        // Permite todos los encabezados
+        corsConfiguration.addAllowedHeader("*");
+
+        // Permite todos los métodos
+        corsConfiguration.addAllowedMethod("*");
+
+        // Permite credenciales (cookies o autenticación basada en sesiones)
+        corsConfiguration.setAllowCredentials(true);
+
+        // Configuración para manejar preflight requests (OPTIONS)
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", corsConfiguration); // Aplica la configuración a todas las rutas
+        source.registerCorsConfiguration("/**", corsConfiguration);
 
         return new CorsFilter(source);
     }
